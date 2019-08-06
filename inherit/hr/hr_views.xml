@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_employee_inherit_hr_omir_form">
+        <field name="name">hr.employee.inherit.hr.omir.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <page name="hr_settings" position="after">
+                <field name="hr_omir_saude_coleta_ids" nolabel="1" colspan="4">
+                    <tree string="Anotacoes do Paciente" editable="top">
+                        <field name="hr_employee_id" invisible="True"/>
+                        <field name="glicemia"/>
+                        <field name="pressao_sistolica"/>
+                        <field name="pressao_diastolica"/>
+                        <field name="km_de_caminhada"/>
+                        <field name="km_de_corrida"/>
+                    </tree>
+                </field>
+            </page>
+        </field>
+    </record>
+</odoo>

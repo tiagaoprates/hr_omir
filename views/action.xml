@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.actions.act_window" id="action_hr_omir_saude_coleta">
+        <field name="name">Minhas Anotacoes</field>
+        <field name="res_model">hr.omir.saude.coleta</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window.view" id="action_hr_omir_saude_coleta_tree">
+        <field name="view_mode">tree</field>
+        <field name="act_window_id" ref="action_hr_omir_saude_coleta"/>
+        <field name="view_id" ref="view_hr_omir_saude_coleta"/>
+        <field name="sequence">1</field>
+    </record>
+</odoo>
