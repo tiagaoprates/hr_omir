@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 
 
 class HROmirSaudeColeta(models.Model):
+    _description = 'Classe de manipulacao dos dados de saude do paciente.'
     _inherit = 'hr.omir.saude.coleta'
 
     @api.model

@@ -20,7 +20,6 @@
         'inherit/hr/hr_views.xml',
         'views/action.xml',
         'views/menu.xml',
-        'security/bcy_group.xml',
         'security/ir.model.access.csv',
     ],
     'application': True,
