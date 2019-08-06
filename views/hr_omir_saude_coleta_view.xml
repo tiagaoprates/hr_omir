@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_hr_omir_saude_coleta">
+        <field name="name">Minhas Anotacoes</field>
+        <field name="model">hr.omir.saude.coleta</field>
+        <field name="arch" type="xml">
+            <tree string="Minhas anotacoes" editable="top">
+                <field name="hr_employee_id" invisible="True"/>
+                <field name="glicemia"/>
+                <field name="pressao_sistolica"/>
+                <field name="pressao_diastolica"/>
+                <field name="km_de_caminhada"/>
+                <field name="km_de_corrida"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
