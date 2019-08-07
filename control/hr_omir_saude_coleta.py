@@ -8,9 +8,9 @@ class HROmirSaudeColeta(models.Model):
     _inherit = 'hr.omir.saude.coleta'
 
     @api.model
-    def search(self, args):
-        args.append(('create_uid', '=', self._uid))
-        res = super(HROmirSaudeColeta, self).search(args)
+    def search(self, args, offset=0, limit=None, order=None, count=False):
+        self._context.get('minhas_anotacoes') and args.append(('create_uid', '=', self._uid))
+        res = super(HROmirSaudeColeta, self).search(args, offset, limit, order, count)
         return res
 
     @api.model
@@ -19,6 +19,6 @@ class HROmirSaudeColeta(models.Model):
         hr_employee_ids = self.env['hr.employee'].search([('user_id', '=', self._uid)])
         if not hr_employee_ids:
             raise ValidationError('Paciente nao cadastrado!')
-        res.update({'hr_employee_id': hr_employee_ids[0]})
+        res.update({'hr_employee_id': hr_employee_ids[0].id})
         return res
 
