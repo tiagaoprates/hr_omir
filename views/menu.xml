@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem name="Minhas Anotacoes" id="menu_hr_omir_saude_coleta"
-              action="action_hr_omir_saude_coleta" parent="hr.menu_human_resources_configuration"
+              action="action_hr_omir_saude_coleta" parent="hr.menu_hr_root"
               sequence="101"/>
 </odoo>

@@ -6,16 +6,18 @@
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
             <page name="hr_settings" position="after">
-                <field name="hr_omir_saude_coleta_ids" nolabel="1" colspan="4">
-                    <tree string="Anotacoes do Paciente" editable="top">
-                        <field name="hr_employee_id" invisible="True"/>
-                        <field name="glicemia"/>
-                        <field name="pressao_sistolica"/>
-                        <field name="pressao_diastolica"/>
-                        <field name="km_de_caminhada"/>
-                        <field name="km_de_corrida"/>
-                    </tree>
-                </field>
+                <page name="anotacoes_paciente" string="Anotacoes do Paciente">
+                    <field name="hr_omir_saude_coleta_ids" nolabel="1" colspan="4">
+                        <tree string="Anotacoes do Paciente" editable="top">
+                            <field name="hr_employee_id" invisible="True"/>
+                            <field name="glicemia"/>
+                            <field name="pressao_sistolica"/>
+                            <field name="pressao_diastolica"/>
+                            <field name="km_de_caminhada"/>
+                            <field name="km_de_corrida"/>
+                        </tree>
+                    </field>
+                </page>
             </page>
         </field>
     </record>
